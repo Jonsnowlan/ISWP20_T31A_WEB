@@ -13,6 +13,7 @@ signupForm.addEventListener('submit', (e) => {
         const modal = document.querySelector('#modal-signup');
         M.Modal.getInstance(modal).close();
         signupForm.reset();
+        
     });
 
 });
@@ -23,6 +24,7 @@ logout.addEventListener('click', (e) => {
     e.preventDefault();
     auth.signOut().then(() => {
         console.log('user signed out');
+                window.location.replace("index.html");
     })
 });
 
@@ -45,3 +47,4 @@ loginForm.addEventListener('submit', (e) => {
     });
 
 });
+
