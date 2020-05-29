@@ -7,17 +7,17 @@ const setupGuides = (data) => {
   let html = '';
   data.forEach(doc => {
     const guide = doc.data();
-    const li = `
+    const li = `--------------------------------------------------------
       <li>
       <h3>Ubicación de inicio del viaje</h3>
         <div class="collapsible-header grey lighten-4"> ${guide.ubicacionInicial} </div>
         <h3>Ubicación de Final del viaje</h3>
         <div class="collapsible-body white"> ${guide.ubicacionFinal} </div>
-        <h3>Ubicación de Final del viaje</h3>
-        <div class="collapsible-body white"> ${guide.costo} </div>
-        <h3>Ubicación de Final del viaje</h3>
+        <h3>Costo del viaje</h3>
+        <div class="collapsible-body white"> ${guide.costo}$ </div>
+        <h3>Conductor </h3>
         <div class="collapsible-body white"> ${guide.conductor} </div>
-
+        ---------------------------------------------------------
       </li>
     `;
     html += li;
